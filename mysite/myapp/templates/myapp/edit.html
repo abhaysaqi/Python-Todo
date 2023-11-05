@@ -1,0 +1,11 @@
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}} <!--  This is another Django template tag. It is used to render the form fields as paragraphs (wrapped in <p> tags) and includes any validation error messages if there are validation errors. The form variable here refers to the form object that is being rendered in the template.
+        For example, if your TodoForm had fields for "name," "priority," and "date," this line would render those fields in the form as:
+<p><label for="id_name">Name:</label> <input type="text" name="name" required id="id_name"></p>
+<p><label for="id_priority">Priority:</label> <input type="number" name="priority" required id="id_priority"></p>
+<p><label for="id_date">Date:</label> <input type="date" name="date" required id="id_date"></p>
+ --> 
+
+    <input type="submit">
+</form>
